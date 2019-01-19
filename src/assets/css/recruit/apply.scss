@@ -1,0 +1,94 @@
+@import "../color";
+
+.apply {
+  // .useInfo {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+
+  //   img {
+  //     width: 5rem;
+  //     height: 5rem;
+  //     border-radius: 50%;
+  //     margin: 6rem 0 1.5rem 0;
+  //   }
+  // }
+
+  // .apply-info {
+  //   padding: 2rem;
+  //   color: $mop-text;
+  //   font-size: 1.6rem;
+  //   text-align: center;
+  // }
+
+  form {
+    padding: 2rem;
+
+    .form-item {
+      position: relative;
+
+      input {
+        width: 100%;
+        height: 3.4rem;
+        margin-bottom: 1rem;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $mop-bg-dark;
+        border-radius: 0;
+        font-size: 1.3rem;
+        color: $mop-text;
+      }
+
+      // i {
+      //   position: absolute;
+      //   right: 0;
+      //   top: calc(50% - 0.5rem);
+      //   transform: translateY(-50%);
+      //   color: $mop-text-gray-deep;
+      //   opacity: 0.2;
+      // }
+    }
+
+    .form-item.form-text {
+      a {
+        float: left;
+      }
+
+      a:last-child {
+        float: right;
+      }
+    }
+
+    .form-item.form-text::after {
+      clear: both;
+      content: "";
+      display: block;
+      height: 0;
+    }
+
+    .form-item.code-wrap {
+      position: relative;
+
+      .code {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      i {
+        right: 10rem;
+      }
+    }
+
+    .mint-button {
+      margin-top: 1.5rem;
+    }
+
+  }
+
+  .useWeChatPhone {
+    display: inline-block;
+    margin: 2rem 0;
+    color: $mop-text-gray;
+  }
+}

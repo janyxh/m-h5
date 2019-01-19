@@ -1,0 +1,81 @@
+/*
+* 商品列表
+*/
+
+@import "../color.scss";
+
+.goods-list {
+  margin: 0;
+  padding: 0;
+
+
+  /*通过fixed固定mescroll的高度*/
+  .mescroll {
+    position: fixed;
+    top: 9rem;
+    bottom: 0;
+    height: auto;
+  }
+
+  .item {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem 2rem;
+
+    .wrap-img {
+      flex: 0 0 10rem;
+      margin-right: 1.6rem;
+
+      img {
+        width: 10rem;
+        height: auto;
+      }
+    }
+
+    .info {
+      flex: 1 1 auto;
+      position: relative;
+
+      h4 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: $mop-text;
+        font-weight: normal;
+      }
+
+      div {
+        position: absolute;
+        bottom: 0;
+
+        p {
+          font-size: 1.2rem;
+          color: $mop-text-gray;
+        }
+
+        b {
+          font-size: 1.8rem;
+          color: $mop-danger;
+
+          i {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.2rem;
+            vertical-align: top;
+          }
+        }
+
+        span {
+          color: $mop-text-gray;
+          margin-left: 1rem;
+          font-size: 1.1rem;
+        }
+
+      }
+    }
+  }
+
+  .item:first-child {
+    padding-top: 0;
+  }
+}

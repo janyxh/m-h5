@@ -1,0 +1,67 @@
+/*
+* 重置 mint ui 框架的样式
+*/
+
+@import "./color";
+
+/* Button */
+.mint-button {
+  border-radius: 0;
+  font-size: 1.5rem;
+}
+
+
+/* Cell */
+
+
+.mint-cell {
+  color: $mop-text;
+  background: none;
+
+  .mint-cell-wrapper {
+    border-bottom: 1px solid $mop-bg;
+    background-image: none;
+    padding-left: 0;
+
+    .mint-cell-label {
+      color: $mop-text-gray;
+    }
+
+    .mint-cell-value {
+      font-size: 1.4rem;
+      color: $mop-text-gray;
+
+      input {
+        background: none;
+      }
+
+      i {
+        color: $mop-text-gray-deep;
+      }
+    }
+
+    .mint-cell-allow-right::after {
+      border: solid 1px $mop-text-gray;
+      border-bottom-width: 0;
+      border-left-width: 0;
+    }
+  }
+
+  .mint-cell-mask::after {
+    background: none;
+  }
+}
+
+.mint-cell.cell-inline {
+  .mint-cell-label {
+    display: inline;
+  }
+}
+
+.mint-cell.padding {
+  padding: 0 2rem;
+
+  .mint-cell-allow-right::after {
+    right: 2.5rem;
+  }
+}

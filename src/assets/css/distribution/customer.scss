@@ -1,0 +1,102 @@
+/*
+* 商品列表
+*/
+
+@import "../color.scss";
+
+.customer-list {
+  margin: 0;
+  padding: 0;
+
+
+  /*通过fixed固定mescroll的高度*/
+  .mescroll {
+    position: fixed;
+    top: 4.6rem;
+    bottom: 0;
+    height: auto;
+  }
+
+  li {
+    list-style: none;
+
+    a {
+      display: block;
+      padding: 0 2rem;
+
+      .wrap {
+
+        display: flex;
+        flex-direction: row;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid $mop-bg;
+
+        .wrap-img {
+          flex: 0 0 5rem;
+          margin-right: 1.2rem;
+
+          img {
+            width: 5rem;
+            height: auto;
+            border-radius: 50%;
+          }
+        }
+
+        .info {
+          flex: 1 1 auto;
+          position: relative;
+          padding-top: 0.5rem;
+
+          h4 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: $mop-text;
+            font-weight: normal;
+          }
+
+          p {
+            margin: 0;
+            font-size: 1.2rem;
+            color: $mop-text-gray;
+            position: absolute;
+            bottom: 0.5rem;
+            left: 0;
+          }
+        }
+
+        .status {
+          flex: 1 1 auto;
+          position: relative;
+          padding-top: 0.5rem;
+
+          span {
+            display: block;
+            color: $mop-text-gray;
+            font-size: 1.1rem;
+            text-align: right;
+          }
+
+          span:last-child {
+            width: 100%;
+            display: block;
+            color: $mop-text-gray;
+            font-size: 1.1rem;
+            text-align: right;
+            position: absolute;
+            bottom: 0.5rem;
+            left: 0;
+          }
+        }
+
+      }
+    }
+  }
+
+  li::after {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border: 0.4rem solid $mop-primary;
+  }
+}

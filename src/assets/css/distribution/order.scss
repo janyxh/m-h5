@@ -1,0 +1,118 @@
+/*
+* 邀请订单列表
+*/
+
+@import "../color.scss";
+
+.order-list {
+
+  /*通过fixed固定mescroll的高度*/
+  .mescroll {
+    position: fixed;
+    top: 5.6rem;
+    bottom: 0;
+    height: auto;
+  }
+
+  .list-view {
+    .title {
+      margin: 0;
+      color: $mop-text;
+      font-size: 1.2rem;
+      font-weight: normal;
+      padding: 1.4rem 2rem;
+      border-bottom: 1px solid $mop-bg;
+
+      span {
+        float: right;
+      }
+
+      span.active {
+        color: $mop-danger;
+      }
+    }
+
+    .title::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .good {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      padding: 1.5rem 2rem;
+
+      .wrap-img {
+        flex: 0 0 7.5rem;
+        margin-right: 1.6rem;
+
+        img {
+          width: 7.5rem;
+          height: auto;
+        }
+      }
+
+      .info {
+        flex: 1 1 auto;
+        position: relative;
+
+        h4 {
+          margin: 0;
+          font-size: 1.5rem;
+          color: $mop-text;
+          font-weight: normal;
+        }
+
+        p {
+          font-size: 1.2rem;
+          color: $mop-text-gray;
+        }
+
+
+        div {
+          position: absolute;
+          bottom: 0;
+
+          b {
+            font-size: 1.8rem;
+            color: $mop-danger;
+
+            i {
+              font-style: normal;
+              font-weight: normal;
+              font-size: 1.2rem;
+            }
+          }
+
+          span {
+            color: $mop-text-gray;
+            font-size: 1.1rem;
+          }
+
+        }
+      }
+    }
+
+    .commission {
+      margin: 0 2rem;
+      padding: 1rem 0;
+      border-top: 1px solid $mop-bg;
+      color: $mop-text;
+      text-align: right;
+
+      span {
+        font-size: 1.6rem;
+      }
+    }
+
+    .note {
+      margin: 0 2rem;
+      padding: 1.4rem 0;
+      color: $mop-text-gray;
+      border-top: 1px solid $mop-bg;
+      font-size: 1.2rem;
+    }
+  }
+}

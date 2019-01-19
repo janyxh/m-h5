@@ -1,0 +1,231 @@
+/*
+* 累计邀请 - 列表/详情
+*/
+
+@import "../color.scss";
+
+
+// -----------------------------------------------------  列表   ---------------------------------------------
+
+.invitation-list {
+  margin: 0;
+  padding: 0;
+
+
+  /*通过fixed固定mescroll的高度*/
+  .mescroll {
+    position: fixed;
+    top: 5.6rem;
+    bottom: 0;
+    height: auto;
+  }
+
+  li {
+    list-style: none;
+
+    a {
+      display: block;
+      padding: 0 2rem;
+
+      .wrap {
+
+        display: flex;
+        flex-direction: row;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid $mop-bg;
+
+        .wrap-img {
+          flex: 0 0 5rem;
+          margin-right: 1.2rem;
+
+          img {
+            width: 5rem;
+            height: auto;
+            border-radius: 50%;
+          }
+        }
+
+        .info {
+          flex: 1 1 auto;
+          position: relative;
+          padding-top: 0.5rem;
+
+          h4 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: $mop-text;
+            font-weight: normal;
+          }
+
+          p {
+            margin: 0;
+            font-size: 1.2rem;
+            position: absolute;
+            bottom: 0.5rem;
+            left: 0;
+          }
+
+          p.grade {
+            color: $mop-primary;
+          }
+
+          p.status {
+            color: $mop-danger;
+          }
+        }
+
+        .status {
+          flex: 1 1 auto;
+          position: relative;
+          padding-top: 0.5rem;
+
+          span {
+            display: block;
+            color: $mop-text-gray;
+            font-size: 1.1rem;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  li:first-child a .wrap {
+    padding-top: 0;
+  }
+}
+
+
+// -----------------------------------------------------  详情  ---------------------------------------------
+
+.invitation-details {
+
+  // 用户信息
+  .info {
+    background: #ffffff;
+
+    .user-info {
+      display: flex;
+      padding: 5rem 0rem 4rem 2rem;
+
+      img {
+        flex: 0 0 5rem;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+      }
+
+      div {
+        position: relative;
+        flex: 1 1 auto;
+
+        p {
+          color: $mop-text;
+          margin: 0.5rem 0;
+        }
+
+        span {
+          color: $mop-text-gray;
+          font-size: 1.2rem;
+        }
+
+        i {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          padding: 0.6rem;
+          background: $mop-primary;
+          color: #ffffff;
+          font-style: normal;
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .statistics {
+      display: flex;
+      padding-bottom: 2rem;
+
+      p {
+        flex: 1;
+        margin: 0;
+        text-align: center;
+
+        b {
+          display: block;
+          font-size: 1.8rem;
+          font-weight: normal;
+        }
+
+        span {
+          color: $mop-text-gray;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  // 销售佣金订单
+  .order {
+    h4 {
+      margin: 0 2rem;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid $mop-bg;
+      color: $mop-text;
+      font-size: 1.5rem;
+      font-weight: normal;
+    }
+
+    .statistics {
+      padding: 2rem 2rem 0 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+
+      .item {
+        width: 50%;
+        margin-bottom: 2rem;
+        display: flex;
+
+        i {
+          flex: 0 0 1.4em;
+          display: block;
+          margin-right: 1.6rem;
+          position: relative;
+
+          .icon {
+            width: 1.4em;
+            height: 1.4em;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+          }
+        }
+
+
+        div {
+          margin: 0;
+
+          p {
+            color: $mop-text-gray;
+            font-size: 1.2rem;
+            margin: 0;
+          }
+
+          p:last-child {
+            font-size: 1.5rem;
+            color: inherit;
+            margin-top: 0.5rem;
+          }
+        }
+      }
+
+      .item:nth-of-type(2n) {
+        justify-content: flex-end;
+      }
+    }
+  }
+}
